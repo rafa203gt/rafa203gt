@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 190" width="100%" height="190">
+  <defs>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#090D16" />
+    </linearGradient>
+
+    <linearGradient id="cyan-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <style>
+    .card-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: #F8FAFC; }
+    .item-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 600; fill: #94A3B8; }
+    .item-val { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 600; fill: #E2E8F0; }
+    .highlight { fill: #38BDF8; font-weight: 700; }
+  </style>
+
+  <!-- Left Card -->
+  <g transform="translate(0, 0)">
+    <rect width="410" height="190" rx="12" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2" filter="url(#shadow)"/>
+    <rect width="410" height="3" rx="1.5" fill="url(#cyan-accent)" />
+    
+    <!-- Title -->
+    <text x="24" y="36" class="card-title">⚡ Developer Profile</text>
+    
+    <!-- Row 1 -->
+    <text x="24" y="72" class="item-label">🚀 Focus:</text>
+    <text x="95" y="72" class="item-val">Full-Stack &amp; iOS Native Dev</text>
+    
+    <!-- Row 2 -->
+    <text x="24" y="104" class="item-label">🛠️ Core:</text>
+    <text x="95" y="104" class="item-val">SwiftUI, React, TypeScript, Node</text>
+
+    <!-- Row 3 -->
+    <text x="24" y="136" class="item-label">🏛️ Arch:</text>
+    <text x="95" y="136" class="item-val">Offline-First &amp; Resilient Systems</text>
+
+    <!-- Row 4 -->
+    <text x="24" y="168" class="item-label">📍 Base:</text>
+    <text x="95" y="168" class="item-val">Spain (CET)</text>
+  </g>
+
+  <!-- Right Card -->
+  <g transform="translate(440, 0)">
+    <rect width="410" height="190" rx="12" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2" filter="url(#shadow)"/>
+    <rect width="410" height="3" rx="1.5" fill="url(#cyan-accent)" />
+
+    <!-- Title -->
+    <text x="24" y="36" class="card-title">📈 Ecosystem &amp; Activity</text>
+
+    <!-- Row 1 -->
+    <text x="24" y="72" class="item-label">🔥 Main PWA:</text>
+    <text x="130" y="72" class="item-val highlight">GymMane (Rafa-Gym-V2)</text>
+
+    <!-- Row 2 -->
+    <text x="24" y="104" class="item-label">📱 Native App:</text>
+    <text x="130" y="104" class="item-val highlight">Fotos Slider (SwiftUI)</text>
+
+    <!-- Row 3 -->
+    <text x="24" y="136" class="item-label">⚙️ Backend:</text>
+    <text x="130" y="136" class="item-val">API Rafa Enterprise Gateway</text>
+
+    <!-- Row 4 -->
+    <text x="24" y="168" class="item-label">✨ Philosophy:</text>
+    <text x="130" y="168" class="item-val">Clean Code &amp; Snappy UI/UX</text>
+  </g>
+</svg>
