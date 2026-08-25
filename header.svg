@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 240" width="100%" height="240">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Text Gradient -->
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+
+    <!-- Glow Gradient -->
+    <radialGradient id="glow-cyan" cx="20%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0" />
+    </radialGradient>
+    
+    <radialGradient id="glow-purple" cx="85%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1E293B" stroke-width="0.75" stroke-opacity="0.4" />
+    </pattern>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .badge-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; fill: #38BDF8; letter-spacing: 1.5px; }
+    .title-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 40px; font-weight: 800; letter-spacing: -0.5px; }
+    .sub-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 16px; font-weight: 500; fill: #94A3B8; }
+    .tag-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 600; fill: #CBD5E1; }
+  </style>
+
+  <!-- Container Box -->
+  <rect width="850" height="240" rx="16" fill="url(#bg-grad)" stroke="#1E293B" stroke-width="1.5" />
+
+  <!-- Glow effects -->
+  <rect width="850" height="240" rx="16" fill="url(#glow-cyan)" />
+  <rect width="850" height="240" rx="16" fill="url(#glow-purple)" />
+
+  <!-- Grid overlay -->
+  <rect width="850" height="240" rx="16" fill="url(#grid)" />
+
+  <!-- Decorative Accents / Tech Decors -->
+  <g opacity="0.6">
+    <circle cx="780" cy="50" r="3" fill="#38BDF8" />
+    <circle cx="800" cy="70" r="2" fill="#818CF8" />
+    <circle cx="760" cy="90" r="2" fill="#C084FC" />
+    <path d="M 740 40 L 810 40" stroke="#334155" stroke-width="1" stroke-dasharray="3,3" />
+    <path d="M 740 110 L 810 110" stroke="#334155" stroke-width="1" stroke-dasharray="3,3" />
+  </g>
+
+  <!-- Content -->
+  <g transform="translate(44, 0)">
+    <!-- Pill Badge -->
+    <g transform="translate(0, 36)">
+      <rect width="185" height="26" rx="13" fill="#0C4A6E" fill-opacity="0.6" stroke="#0284C7" stroke-width="1" />
+      <circle cx="14" cy="13" r="4" fill="#38BDF8" />
+      <text x="26" y="17" class="badge-text">FULL-STACK &amp; iOS</text>
+    </g>
+
+    <!-- Main Title -->
+    <g transform="translate(0, 102)">
+      <text class="title-text" fill="url(#text-grad)" filter="url(#shadow)">Rafael | @rafa203gt</text>
+    </g>
+
+    <!-- Subtitle -->
+    <g transform="translate(0, 138)">
+      <text class="sub-text">Software Engineer crafting high-performance web apps &amp; native experiences</text>
+    </g>
+
+    <!-- Highlights Badges / Pills -->
+    <g transform="translate(0, 178)">
+      <!-- Pill 1 -->
+      <g>
+        <rect width="130" height="28" rx="14" fill="#1E293B" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+        <text x="14" y="18" class="tag-text">📱 Swift &amp; SwiftUI</text>
+      </g>
+      <!-- Pill 2 -->
+      <g transform="translate(138, 0)">
+        <rect width="150" height="28" rx="14" fill="#1E293B" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+        <text x="14" y="18" class="tag-text">⚡ TypeScript &amp; React</text>
+      </g>
+      <!-- Pill 3 -->
+      <g transform="translate(296, 0)">
+        <rect width="145" height="28" rx="14" fill="#1E293B" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+        <text x="14" y="18" class="tag-text">📦 Offline-First PWA</text>
+      </g>
+      <!-- Pill 4 -->
+      <g transform="translate(449, 0)">
+        <rect width="140" height="28" rx="14" fill="#1E293B" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+        <text x="14" y="18" class="tag-text">🔌 APIs &amp; Smart IoT</text>
+      </g>
+    </g>
+  </g>
+</svg>
