@@ -1,258 +1,146 @@
-#!/bin/bash
-
-function display {
-
-    #Clear Console
-    echo -e "\033c"
-
-    #Display MOTD
-    echo "
-
-    ==========================================================================
-
-    $(tput setaf 6)   #                                        #     #                     
-    $(tput setaf 6)  # #   #        ##    ####  ##### #  ####  #     #  ####   ####  ##### 
-    $(tput setaf 6) #   #  #       #  #  #    #   #   # #    # #     # #    # #        #   
-    $(tput setaf 6)#     # #      #    # #        #   # #      ####### #    #  ####    #   
-    $(tput setaf 6)####### #      ###### #        #   # #      #     # #    #      #   #   
-    $(tput setaf 6)#     # #      #    # #    #   #   # #    # #     # #    # #    #   #   
-    $(tput setaf 6)#     # ###### #    #  ####    #   #  ####  #     #  ####   ####    #     
-
-    ==========================================================================
-
-    "  
-}
-
-function forceStuffs {
-  # Forcing Default Server Icon.
-  curl -O https://media.discordapp.net/attachments/944177397228511234/945187873919995964/server-icon.png
-
-  # Forcing Hibernate Plugin.
-  curl -o plugins/alactichost.jar https://cdn.discordapp.com/attachments/944177397228511234/945181383016464384/alactichost.jar
-
-  # Forcing MOTD.
-  echo "motd=\u00a7fThis server is hosted on \u00a79AlacticHost.com\u00a7r\n\u00a77You can change this MOTD in server.properties" >> server.properties
-}
-
-function launchJavaServer {
-  # Using Aikars flags.
-  java -Xms1024M -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar paper-server.jar nogui
-}
-FILE=eula.txt
-
-# Currently this is still in development.
-
-function optimizeJavaServer {
-  # Decreasing view distance.
-  echo "view-distance=6" >> server.properties
-
-  # Slows down incremental chunk saving during the world save task
-  # echo "max-auto-save-chunks-per-tick: 10" >> paper.yml
-  
-  # Optimize explosions.
-  # echo "optimize-explosions: true" >> paper.yml
-  
-  # Disable overload warnings
-  # echo "warn-on-overload: false" >> spigot.yml
-
-  # Prevents players from entering an unloaded chunk (due to lag), which causes more lag.
-  # echo "prevent-moving-into-unloaded-chunks: true" >> paper.yml
-  
-}
-
-# Check if the node IP is matched.
-
-if [ ! -f "$FILE" ]
-then
-    mkdir -p plugins
-    display
-sleep 5
-echo "
-
-  $(tput setaf 1)If you found any bug or errors, please submit it to me via adrea#6661.
-
-  $(tput setaf 3)Which platform are you gonna use?
-
-  1) Paper 1.8.8       6)  BungeeCord 
-  2) Paper 1.12.2      7)  Bedrock Lastest
-  3) Paper 1.16.5      8)  Pocketmine MP
-  4) Paper 1.17.1      9)  Discord NodeJS 
-  5) Paper 1.18.1      10) Discord Python
-
-  "
-read -r n
-
-# I was uploading all the server jars to Discord because I was in hurry for vacation lol, will do a complete recode soon.
-case $n in
-  1) 
-    sleep 1
-
-    echo "$(tput setaf 3)Ok, I will download 1.8.8 and start it for you."
-
-    sleep 4
-
-    forceStuffs
-
-    curl -O https://cdn.discordapp.com/attachments/904385467359842345/947085351443394570/paper-server.jar
-
-    display
-    
-    echo "$(tput setaf 1)You have to change the docker image because of this version, otherwise it will not work. Please go to the Startup tab, and change the docker image to Java 8."
-    
-    sleep 10
-    
-    echo -e ""
-    
-    optimizeJavaServer
-    launchJavaServer
-  ;;
-
-  2) 
-    sleep 1
-
-    echo "$(tput setaf 3)Ok, I will download 1.12.2 and start it for you."
-
-    sleep 4
-
-    forceStuffs
-
-    curl -O https://cdn.discordapp.com/attachments/904385467359842345/947085463896870942/paper-server.jar
-
-    display   
-
-    echo "$(tput setaf 1)You have to change the docker image because of this version, otherwise it will not work. Please go to the Startup tab, and change the docker image to Java 11."
-    
-    sleep 10
-
-    echo -e ""
-
-    optimizeJavaServer
-    launchJavaServer
-  ;;
-
-  3) 
-    sleep 1
-
-    echo "$(tput setaf 3)Ok, I will download 1.16.5 and start it for you."
-
-    sleep 4
-
-    forceStuffs
-
-    curl -O https://cdn.discordapp.com/attachments/904385467359842345/947085612710756412/paper-server.jar
-
-    display   
-
-    echo "$(tput setaf 1)You have to change the docker image because of this version, otherwise it will not work. Please go to the Startup tab, and change the docker image to Java 16."
-    
-    sleep 10
-
-    echo -e ""
-
-    optimizeJavaServer
-    launchJavaServer
-  ;;
-
-  4)
-    sleep 1
-
-    echo "$(tput setaf 3)Ok, I will download 1.17.1 and start it for you."
-
-    sleep 4
-
-    forceStuffs
-
-    curl -O https://download2276.mediafire.com/5dptw00gq4mg/dcnk3b1x0h1aial/paper-server.jar
-
-    display
-
-    sleep 10
-
-    echo -e ""
-
-    optimizeJavaServer
-    launchJavaServer
-  ;;
-
-  5) 
-    sleep 1
-
-    echo "$(tput setaf 3)Ok, I will download 1.18.1 and start it for you."
-
-    sleep 4
-
-    forceStuffs
-
-    curl -O https://cdn.discordapp.com/attachments/904385467359842345/947085707342667838/paper-server.jar
-
-    display
-
-    sleep 10
-
-    echo -e ""
-
-    optimizeJavaServer
-    launchJavaServer
-  ;;
-
-  6)
-    echo "$(tput setaf 3)Ok, I will download lasted Bungeecord and start it for you."
-
-    curl -O https://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
-
-    display 
-
-    java -Xms512M -Xmx512M -jar BungeeCord.jar
-  ;;
-
-  7)
-    echo ""
-    echo "This platform is not available yet, please check back later. (COMING_SOON)"
-    exit
-  ;;
-
-  8)
-    echo ""
-    echo "This platform is not available yet, please check back later. (COMING_SOON)"
-    exit
-  ;;
-
-  9)
-    echo ""
-    echo "This platform is not available yet, please check back later. (COMING_SOON)"
-    exit
-  ;;
-
-  10)
-    echo ""
-    echo "This platform is not available yet, please check back later. (COMING_SOON)"
-    exit
-  ;;
-
-  *) 
-    echo "Invalid option, exiting..."
-    exit
-  ;;
-esac  
-else
-if [ -f plugins ]; then
-mkdir plugins
-fi
-if [ -f BungeeCord.jar ]; then
-  display
-  java -Xms512M -Xmx512M -jar BungeeCord.jar
-else
-if [ ! -f hA5AW4Ni6Si6S4WvZ4WvZhA5AW4N.png ]; then
-# Force the server icon.
-curl -O https://media.discordapp.net/attachments/944177397228511234/945187873919995964/server-icon.png
-fi
-if [ -d plugins ]; then
-  mkdir -p plugins
-fi
-# Redownload the Hibernate jar incase someone delete it.
-  curl -o plugins/alactichost.jar https://cdn.discordapp.com/attachments/944177397228511234/945181383016464384/alactichost.jar
-  display   
-  launchJavaServer
-fi
-fi
-fi
+<div align="center">
+
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,36&height=200&section=header&text=Rafael%20%7C%20rafa203gt&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20%26%20iOS%20Developer&descFontSize=20&descAlignY=62" width="100%" alt="Header Banner"/>
+
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=550&lines=Building+modern+offline-first+web+apps;Crafting+fluid+native+iOS+experiences;Engineering+scalable+APIs+%26+Cloud+services;Passionate+about+Clean+Code+%26+UI%2FUX" alt="Typing SVG" />
+  </a>
+
+  <p align="center">
+    <a href="mailto:rafa203gt@gmail.com"><img src="https://img.shields.io/badge/Email-rafa203gt%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+    <a href="https://github.com/rafa203gt"><img src="https://img.shields.io/badge/GitHub-rafa203gt-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+  </p>
+
+</div>
+
+---
+
+### 👨‍💻 Sobre mí / About Me
+
+- 🚀 **Especialista en Software**: Desarrollo de aplicaciones web completas (Full-Stack), apps móviles nativas para iOS (Swift / SwiftUI) y arquitecturas resilientes *offline-first*.
+- 💡 **Enfoque técnico**: Código limpio, patrones de diseño sólidos, interfaces de usuario de alta fidelidad (UI/UX) y alto rendimiento.
+- 🛠️ **Stack principal**: TypeScript, React, Next.js, SwiftUI, Node.js, Tailwind CSS y Supabase.
+- 🎯 **Objetivo constante**: Transformar ideas y requerimientos complejos en software elegante, rápido y escalable.
+
+---
+
+### 🚀 Proyectos Destacados / Featured Projects
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🏋️‍♂️ <a href="https://github.com/rafa203gt/Rafa-Gym-V2">GymMane (Rafa-Gym-V2)</a></h3>
+      <p>Aplicación web progresiva (PWA) de registro de entrenamiento físico y análisis de progresión de fuerza en modo oscuro, con soporte offline completo y persistencia local.</p>
+      <p>
+        <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+        <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
+        <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" />
+        <img src="https://img.shields.io/badge/IndexedDB-4A154B?style=flat-square&logo=sqlite&logoColor=white" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📸 <a href="https://github.com/rafa203gt/fotos-slider-app">Fotos Slider App</a></h3>
+      <p>App nativa para iOS 17+ construida en SwiftUI con gestos estilo Tinder para limpiar y organizar la biblioteca de fotos con papelera de seguridad PhotoKit.</p>
+      <p>
+        <img src="https://img.shields.io/badge/Swift-FA7343?style=flat-square&logo=swift&logoColor=white" />
+        <img src="https://img.shields.io/badge/SwiftUI-007ACC?style=flat-square&logo=swift&logoColor=white" />
+        <img src="https://img.shields.io/badge/iOS_17+-000000?style=flat-square&logo=apple&logoColor=white" />
+        <img src="https://img.shields.io/badge/PhotoKit-34C759?style=flat-square&logo=apple&logoColor=white" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>⚡ <a href="https://github.com/rafa203gt/api-rafa">API Rafa Gateway</a></h3>
+      <p>Capa de API Gateway y cliente HTTP de grado empresarial en TypeScript con mecanismos de resiliencia (circuit breakers, retry policies), caché inteligente y soporte Serverless.</p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />
+        <img src="https://img.shields.io/badge/REST_API-FF6C37?style=flat-square&logo=postman&logoColor=white" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🏠 <a href="https://github.com/rafa203gt/rafa-shelly">Rafa Shelly IoT</a></h3>
+      <p>Automatización y telemetría domótica integrada para controladores y dispositivos inteligentes Shelly con comunicación bidireccional y scripting.</p>
+      <p>
+        <img src="https://img.shields.io/badge/IoT-009688?style=flat-square&logo=home-assistant&logoColor=white" />
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+        <img src="https://img.shields.io/badge/Automation-FF9900?style=flat-square&logo=awslambda&logoColor=white" />
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 🛠️ Tecnologías y Herramientas / Tech Stack
+
+<div align="center">
+
+#### Lenguajes de Programación
+<p>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
+</p>
+
+#### Frontend & Mobile
+<p>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/SwiftUI-007ACC?style=for-the-badge&logo=swift&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+</p>
+
+#### Backend, Base de Datos & Cloud
+<p>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
+</p>
+
+#### Herramientas & DevOps
+<p>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" />
+</p>
+
+</div>
+
+---
+
+### 📊 Estadísticas de GitHub / GitHub Metrics
+
+<div align="center">
+  <table border="0">
+    <tr>
+      <td align="center" valign="middle">
+        <img src="https://github-readme-stats.vercel.app/api?username=rafa203gt&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8&icon_color=38BDF8&text_color=94A3B8" alt="GitHub Stats" />
+      </td>
+      <td align="center" valign="middle">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rafa203gt&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8&text_color=94A3B8" alt="Top Languages" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=rafa203gt&theme=tokyonight&hide_border=true&background=0D1117&ring=38BDF8&fire=38BDF8&currStreakLabel=38BDF8" alt="GitHub Streak" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,36&height=100&section=footer" width="100%" alt="Footer Banner"/>
+</div>
