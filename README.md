@@ -1,14 +1,19 @@
 <div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,36&height=200&section=header&text=Rafael%20%7C%20rafa203gt&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20%26%20iOS%20Developer&descFontSize=20&descAlignY=62" width="100%" alt="Header Banner"/>
+  <img src="https://raw.githubusercontent.com/rafa203gt/rafa203gt/main/header.svg" width="100%" alt="Rafael | @rafa203gt - Full-Stack & iOS Developer"/>
+
+  <br/><br/>
 
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=550&lines=Building+modern+offline-first+web+apps;Crafting+fluid+native+iOS+experiences;Engineering+scalable+APIs+%26+Cloud+services;Passionate+about+Clean+Code+%26+UI%2FUX" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=550&lines=Building+modern+offline-first+web+apps;Crafting+fluid+native+iOS+experiences;Engineering+scalable+APIs+%26+Cloud+services;Passionate+about+Clean+Code+%26+UI%2FUX" alt="Typing SVG" />
   </a>
+
+  <br/>
 
   <p align="center">
     <a href="mailto:rafa203gt@gmail.com"><img src="https://img.shields.io/badge/Email-rafa203gt%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
     <a href="https://github.com/rafa203gt"><img src="https://img.shields.io/badge/GitHub-rafa203gt-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+    <a href="https://github.com/rafa203gt?tab=repositories"><img src="https://img.shields.io/badge/Public_Repos-18+-6366F1?style=for-the-badge&logo=github&logoColor=white" alt="Repos"/></a>
   </p>
 
 </div>
@@ -119,28 +124,8 @@
 
 ---
 
-### 📊 Estadísticas de GitHub / GitHub Metrics
+### 📊 Perfil & Ecosistema de Desarrollo
 
 <div align="center">
-  <table border="0">
-    <tr>
-      <td align="center" valign="middle">
-        <img src="https://github-readme-stats.vercel.app/api?username=rafa203gt&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8&icon_color=38BDF8&text_color=94A3B8" alt="GitHub Stats" />
-      </td>
-      <td align="center" valign="middle">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rafa203gt&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=38BDF8&text_color=94A3B8" alt="Top Languages" />
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" align="center">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=rafa203gt&theme=tokyonight&hide_border=true&background=0D1117&ring=38BDF8&fire=38BDF8&currStreakLabel=38BDF8" alt="GitHub Streak" />
-      </td>
-    </tr>
-  </table>
-</div>
-
----
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,36&height=100&section=footer" width="100%" alt="Footer Banner"/>
+  <img src="https://raw.githubusercontent.com/rafa203gt/rafa203gt/main/stats.svg" width="100%" alt="Developer Metrics & Ecosystem" />
 </div>
