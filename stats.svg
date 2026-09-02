@@ -44,20 +44,20 @@
     
     <text x="20" y="32" class="card-title">⚡ Core Engineering</text>
     
-    <text x="20" y="66" class="item-label">🌐 Web:</text>
-    <text x="75" y="66" class="item-val">React 19, Next.js, TS</text>
+    <text x="20" y="66" class="item-label">🌐 Web &amp; Desktop:</text>
+    <text x="110" y="66" class="item-val">Electron, React 19, TS</text>
     
-    <text x="20" y="96" class="item-label">📱 Native:</text>
-    <text x="75" y="96" class="item-val">SwiftUI, iOS 17+, PhotoKit</text>
+    <text x="20" y="96" class="item-label">📱 Native iOS:</text>
+    <text x="110" y="96" class="item-val">SwiftUI, iOS 17+, PhotoKit</text>
 
     <text x="20" y="126" class="item-label">🤖 Protocol:</text>
-    <text x="88" y="126" class="item-val highlight-cyan">Model Context Protocol</text>
+    <text x="110" y="126" class="item-val highlight-cyan">Model Context Protocol</text>
 
     <text x="20" y="156" class="item-label">⚙️ Systems:</text>
-    <text x="88" y="156" class="item-val">C++20, Low-Level / Win32</text>
+    <text x="110" y="156" class="item-val">C++20, Low-Level / Win32</text>
 
     <text x="20" y="186" class="item-label">📍 Base:</text>
-    <text x="75" y="186" class="item-val">Spain (CET / UTC+1)</text>
+    <text x="110" y="186" class="item-val">Spain (CET / UTC+1)</text>
   </g>
 
   <!-- Card 2: Flagship Systems -->
@@ -70,8 +70,8 @@
     <text x="20" y="66" class="item-label">🤖 AnyDesk MCP:</text>
     <text x="118" y="66" class="item-val highlight-purple">Desktop AI Support</text>
 
-    <text x="20" y="96" class="item-label">🏋️ GymMane V2:</text>
-    <text x="118" y="96" class="item-val">Offline-First PWA</text>
+    <text x="20" y="96" class="item-label">🎮 MC Launcher:</text>
+    <text x="118" y="96" class="item-val">16-Thread Turbo App</text>
 
     <text x="20" y="126" class="item-label">📸 Fotos Slider:</text>
     <text x="118" y="126" class="item-val">SwiftUI Photo Cleaner</text>
