@@ -1,74 +1,108 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 190" width="100%" height="190">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 215" width="100%" height="215">
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0F172A" />
-      <stop offset="100%" stop-color="#090D16" />
+      <stop offset="100%" stop-color="#070B14" />
     </linearGradient>
 
+    <!-- Accent Gradients -->
     <linearGradient id="cyan-accent" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38BDF8" />
-      <stop offset="100%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#0284C7" />
     </linearGradient>
 
+    <linearGradient id="purple-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+
+    <linearGradient id="emerald-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
     </filter>
   </defs>
 
   <style>
-    .card-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 15px; font-weight: 700; fill: #F8FAFC; }
-    .item-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 600; fill: #94A3B8; }
-    .item-val { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; font-weight: 600; fill: #E2E8F0; }
-    .highlight { fill: #38BDF8; font-weight: 700; }
+    .card-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 700; fill: #F8FAFC; letter-spacing: 0.3px; }
+    .item-label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11.5px; font-weight: 600; fill: #94A3B8; }
+    .item-val { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11.5px; font-weight: 600; fill: #E2E8F0; }
+    .highlight-cyan { fill: #38BDF8; font-weight: 700; }
+    .highlight-purple { fill: #C084FC; font-weight: 700; }
+    .highlight-emerald { fill: #34D399; font-weight: 700; }
   </style>
 
-  <!-- Left Card -->
+  <!-- Card 1: Core Engineering -->
   <g transform="translate(0, 0)">
-    <rect width="410" height="190" rx="12" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2" filter="url(#shadow)"/>
-    <rect width="410" height="3" rx="1.5" fill="url(#cyan-accent)" />
+    <rect width="286" height="215" rx="14" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2" filter="url(#shadow)"/>
+    <rect width="286" height="3" rx="1.5" fill="url(#cyan-accent)" />
     
-    <!-- Title -->
-    <text x="24" y="36" class="card-title">⚡ Developer Profile</text>
+    <text x="20" y="32" class="card-title">⚡ Core Engineering</text>
     
-    <!-- Row 1 -->
-    <text x="24" y="72" class="item-label">🚀 Focus:</text>
-    <text x="95" y="72" class="item-val">Full-Stack &amp; iOS Native Dev</text>
+    <text x="20" y="66" class="item-label">🌐 Web:</text>
+    <text x="75" y="66" class="item-val">React 19, Next.js, TS</text>
     
-    <!-- Row 2 -->
-    <text x="24" y="104" class="item-label">🛠️ Core:</text>
-    <text x="95" y="104" class="item-val">SwiftUI, React, TypeScript, Node</text>
+    <text x="20" y="96" class="item-label">📱 Native:</text>
+    <text x="75" y="96" class="item-val">SwiftUI, iOS 17+, PhotoKit</text>
 
-    <!-- Row 3 -->
-    <text x="24" y="136" class="item-label">🏛️ Arch:</text>
-    <text x="95" y="136" class="item-val">Offline-First &amp; Resilient Systems</text>
+    <text x="20" y="126" class="item-label">🤖 Protocol:</text>
+    <text x="88" y="126" class="item-val highlight-cyan">Model Context Protocol</text>
 
-    <!-- Row 4 -->
-    <text x="24" y="168" class="item-label">📍 Base:</text>
-    <text x="95" y="168" class="item-val">Spain (CET)</text>
+    <text x="20" y="156" class="item-label">⚙️ Systems:</text>
+    <text x="88" y="156" class="item-val">C++20, Low-Level / Win32</text>
+
+    <text x="20" y="186" class="item-label">📍 Base:</text>
+    <text x="75" y="186" class="item-val">Spain (CET / UTC+1)</text>
   </g>
 
-  <!-- Right Card -->
-  <g transform="translate(440, 0)">
-    <rect width="410" height="190" rx="12" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2" filter="url(#shadow)"/>
-    <rect width="410" height="3" rx="1.5" fill="url(#cyan-accent)" />
+  <!-- Card 2: Flagship Systems -->
+  <g transform="translate(307, 0)">
+    <rect width="286" height="215" rx="14" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2" filter="url(#shadow)"/>
+    <rect width="286" height="3" rx="1.5" fill="url(#purple-accent)" />
 
-    <!-- Title -->
-    <text x="24" y="36" class="card-title">📈 Ecosystem &amp; Activity</text>
+    <text x="20" y="32" class="card-title">🚀 Flagship Systems</text>
 
-    <!-- Row 1 -->
-    <text x="24" y="72" class="item-label">🔥 Main PWA:</text>
-    <text x="130" y="72" class="item-val highlight">GymMane (Rafa-Gym-V2)</text>
+    <text x="20" y="66" class="item-label">🤖 AnyDesk MCP:</text>
+    <text x="118" y="66" class="item-val highlight-purple">Desktop AI Support</text>
 
-    <!-- Row 2 -->
-    <text x="24" y="104" class="item-label">📱 Native App:</text>
-    <text x="130" y="104" class="item-val highlight">Fotos Slider (SwiftUI)</text>
+    <text x="20" y="96" class="item-label">🏋️ GymMane V2:</text>
+    <text x="118" y="96" class="item-val">Offline-First PWA</text>
 
-    <!-- Row 3 -->
-    <text x="24" y="136" class="item-label">⚙️ Backend:</text>
-    <text x="130" y="136" class="item-val">API Rafa Enterprise Gateway</text>
+    <text x="20" y="126" class="item-label">📸 Fotos Slider:</text>
+    <text x="118" y="126" class="item-val">SwiftUI Photo Cleaner</text>
 
-    <!-- Row 4 -->
-    <text x="24" y="168" class="item-label">✨ Philosophy:</text>
-    <text x="130" y="168" class="item-val">Clean Code &amp; Snappy UI/UX</text>
+    <text x="20" y="156" class="item-label">🔐 Rafa-Auth:</text>
+    <text x="118" y="156" class="item-val">Cloud Licensing Hub</text>
+
+    <text x="20" y="186" class="item-label">⚡ Rafa API:</text>
+    <text x="118" y="186" class="item-val">Resilient TS Gateway</text>
+  </g>
+
+  <!-- Card 3: Standards & Quality -->
+  <g transform="translate(614, 0)">
+    <rect width="286" height="215" rx="14" fill="url(#card-grad)" stroke="#1E293B" stroke-width="1.2" filter="url(#shadow)"/>
+    <rect width="286" height="3" rx="1.5" fill="url(#emerald-accent)" />
+
+    <text x="20" y="32" class="card-title">🛡️ Standards &amp; Quality</text>
+
+    <text x="20" y="66" class="item-label">🎯 Typing:</text>
+    <text x="82" y="66" class="item-val highlight-emerald">Strict Types &amp; Zero-Any</text>
+
+    <text x="20" y="96" class="item-label">⚡ UI Flow:</text>
+    <text x="82" y="96" class="item-val">60/120 FPS Fluid Design</text>
+
+    <text x="20" y="126" class="item-label">🧪 Testing:</text>
+    <text x="82" y="126" class="item-val">AAA Pattern &amp; QA</text>
+
+    <text x="20" y="156" class="item-label">🔒 Security:</text>
+    <text x="82" y="156" class="item-val">Zero Hardcoded Secrets</text>
+
+    <text x="20" y="186" class="item-label">📦 Memory:</text>
+    <text x="82" y="186" class="item-val">Zero-Leak &amp; High Efficiency</text>
   </g>
 </svg>
