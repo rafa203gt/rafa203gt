@@ -5,7 +5,7 @@
   <br/><br/>
 
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Building+autonomous+AI+Agents+%26+MCP+Protocols;Crafting+fluid+native+iOS+%26+SwiftUI+experiences;Engineering+high-performance+offline-first+web+apps;Architecting+resilient+backend+%26+cloud+systems;Passionate+about+Clean+Code%2C+High+FPS+%26+UI%2FUX" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Building+autonomous+AI+Agents+%26+MCP+Protocols;Crafting+fluid+native+iOS+%26+SwiftUI+experiences;Engineering+high-performance+desktop+%26+web+apps;Architecting+resilient+backend+%26+cloud+systems;Passionate+about+Clean+Code%2C+High+FPS+%26+UI%2FUX" alt="Typing SVG" />
   </a>
 
   <br/><br/>
@@ -41,18 +41,18 @@
     <td width="50%" valign="top">
       <h4>🇪🇸 Enfoque Profesional &amp; Filosofía</h4>
       <ul>
-        <li>🚀 <b>Arquitectura Full-Stack &amp; Mobile</b>: Creación de aplicaciones web de alto rendimiento, apps nativas para iOS (Swift / SwiftUI) y sistemas distribuidos en la nube.</li>
+        <li>🚀 <b>Arquitectura Full-Stack, Desktop &amp; Mobile</b>: Creación de aplicaciones de escritorio de alto rendimiento (Electron + React), apps nativas para iOS (Swift / SwiftUI) y sistemas distribuidos en la nube.</li>
         <li>🤖 <b>Inteligencia Artificial &amp; Protocolos MCP</b>: Desarrollo de servidores Model Context Protocol (MCP) y herramientas autónomas de control de escritorio e infraestructura.</li>
-        <li>📦 <b>Ingeniería Resiliente Offline-First</b>: Persistencia local con IndexedDB/SQLite, sincronización en segundo plano y tolerancia a fallos con circuit breakers.</li>
+        <li>📦 <b>Ingeniería Resiliente &amp; Alto Rendimiento</b>: Motores de descarga paralelos multi-hilo, persistencia local segura, auto-actualizadores hot-swap y tolerancia a fallos.</li>
         <li>✨ <b>Calidad de Código &amp; UI/UX Pro Max</b>: Tipado estricto (Zero-Any), pruebas unitarias e integrales AAA, cero secretos en código y animaciones fluidas a 60/120 FPS.</li>
       </ul>
     </td>
     <td width="50%" valign="top">
       <h4>🇬🇧 Engineering Overview &amp; Philosophy</h4>
       <ul>
-        <li>🚀 <b>Full-Stack &amp; Mobile Architecture</b>: Building ultra-fast responsive web apps, native iOS apps (Swift / SwiftUI), and robust distributed systems.</li>
+        <li>🚀 <b>Full-Stack, Desktop &amp; Mobile Architecture</b>: Building high-performance desktop apps (Electron + React), native iOS apps (Swift / SwiftUI), and robust distributed backends.</li>
         <li>🤖 <b>AI Tooling &amp; MCP Protocols</b>: Architecting Model Context Protocol (MCP) servers and autonomous desktop/server tooling.</li>
-        <li>📦 <b>Resilient Offline-First Design</b>: Local storage persistence, seamless background synchronization, and resilient fault-tolerant API pipelines.</li>
+        <li>📦 <b>Resilient &amp; High-Throughput Design</b>: Multi-thread parallel download engines, local caching, in-app hot-swap auto-updaters, and resilient fault-tolerant pipelines.</li>
         <li>✨ <b>Code Quality &amp; UI/UX Pro Max</b>: Strict TypeScript (Zero-Any), AAA testing discipline, zero hardcoded secrets, and high-fidelity fluid 60/120 FPS interfaces.</li>
       </ul>
     </td>
@@ -76,13 +76,13 @@
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>🏋️‍♂️ <a href="https://github.com/rafa203gt/Rafa-Gym-V2">GymMane (Rafa-Gym-V2)</a></h3>
-      <p>Aplicación web progresiva (PWA) de registro de entrenamiento físico y análisis de progresión de fuerza en modo oscuro, con soporte offline completo y persistencia local IndexedDB.</p>
+      <h3>🎮 <a href="https://github.com/rafa203gt/Rafa-MC-LAUNCHER">Rafa MC Launcher</a></h3>
+      <p>Lanzador de escritorio de alto rendimiento en Electron + React con descargas aceleradas en 16 hilos simultáneos, auto-actualizador in-app hot-swap y optimización G1GC anti-lag.</p>
       <p>
-        <img src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+        <img src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" />
+        <img src="https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
         <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
-        <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" />
-        <img src="https://img.shields.io/badge/📦_Offline_First-IndexedDB-818CF8?style=flat-square" />
+        <img src="https://img.shields.io/badge/⚡_Turbo_Engine-16_Threads-10B981?style=flat-square" />
       </p>
     </td>
   </tr>
@@ -150,14 +150,14 @@
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 </p>
 
-#### Frontend & Mobile
+#### Frontend, Desktop & Mobile
 <p>
+  <img src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white" />
   <img src="https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
   <img src="https://img.shields.io/badge/SwiftUI-007ACC?style=for-the-badge&logo=swift&logoColor=white" />
   <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redux_/_Zustand-764ABC?style=for-the-badge&logo=redux&logoColor=white" />
 </p>
 
 #### Backend, Base de Datos & Protocolos
